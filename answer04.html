@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S-Will 자바스크립트 세미나</title>
+  </head>
+  <body>
+    <p id="p1">Hello World</p>
+  </body>
+  <script>
+    for (var i=1; i<=5; i++) {
+      console.log(i);
+    }
+    for (var j=10; j>=6; j--) {
+      console.log(j);
+    }
+    for (var k=0; k<10; k+=2) {
+      console.log(k);
+    }
+
+    var fruits = ['사과', '배', '복숭아'];
+    for (key in fruits) {
+      console.log(key);
+    }
+
+    // 예제 1. for 루프를 중복 fruits 안의 모든 요소를 출력해 보세요.
+    for (key in fruits) {
+      console.log(fruits[key]);
+    }
+  </script>
+</html>

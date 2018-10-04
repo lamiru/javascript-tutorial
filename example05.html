@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S-Will 자바스크립트 세미나</title>
+  </head>
+  <body>
+    <p id="p1">Hello World</p>
+  </body>
+  <script>
+    var p1 = {
+      'name': 'John',
+      'age': 24,
+      'sex': 'Male',
+      'job': 'Web Designer'
+    };
+    console.log(p1);
+
+    for (key in p1) {
+      console.log(key + ': ' + p1[key]);
+    }
+
+    // 예제 1. for 루프를 사용하여, persons 안의 모든 객체를 출력해 보세요.
+    var persons = [
+      {
+        'name': 'John',
+        'age': 24,
+        'sex': 'Male',
+        'job': 'Web Designer'
+      }, // 첫번째 객체
+      {
+        'name': 'Anna',
+        'age': 27,
+        'sex': 'Female',
+        'job': 'Police Officer'
+      }, // 두번째 객체
+      {
+        'name': 'Paul',
+        'age': 33,
+        'sex': 'Male',
+        'job': 'Teacher'
+      } // 세번째 객체
+    ];
+
+    // 예제 2. for 루프를 중복 사용하여, persons 안의 모든 사람들의 프로필을 출력해 보세요.
+  </script>
+</html>
