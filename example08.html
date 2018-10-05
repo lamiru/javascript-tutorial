@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S-Will 자바스크립트 세미나</title>
+  </head>
+  <body>
+    <p id="p1">Hello World</p>
+  </body>
+  <script>
+    var students = [];
+    students.push({'이름': '윤인성', '국어': 87, '수학': 98, '영어': 38, '과학': 85});
+    students.push({'이름': '연하진', '국어': 92, '수학': 19, '영어': 58, '과학': 54});
+    students.push({'이름': '구지연', '국어': 76, '수학': 99, '영어': 64, '과학': 29});
+    students.push({'이름': '나선주', '국어': 48, '수학': 87, '영어': 43, '과학': 25});
+    students.push({'이름': '윤아린', '국어': 58, '수학': 48, '영어': 29, '과학': 65});
+    students.push({'이름': '윤명월', '국어': 39, '수학': 28, '영어': 49, '과학': 72});
+    students.push({'이름': '김미화', '국어': 19, '수학': 99, '영어': 58, '과학': 85});
+    students.push({'이름': '김연화', '국어': 90, '수학': 10, '영어': 76, '과학': 76});
+    students.push({'이름': '박아현', '국어': 47, '수학': 48, '영어': 52, '과학': 95});
+    students.push({'이름': '서준서', '국어': 29, '수학': 67, '영어': 84, '과학': 45});
+    console.log(students);
+
+    for (i in students) {
+      var result = '|';
+      for (key in students[i]) {
+        result += key + ': ' + students[i][key] + '|';
+      }
+      console.log(result);
+    } // 결과 1
+
+    // 예제 1. 아래와 같이 입력해도 new_students에 students와 같은 내용이 입력되도록 St를 정의하세요.
+    function St(name, korean, math, english, science) {
+    }
+    var new_students = [];
+    new_students.push(new St('윤인성', 87, 98, 38, 85));
+    new_students.push(new St('연하진', 92, 19, 58, 54));
+    new_students.push(new St('구지연', 76, 99, 64, 29));
+    new_students.push(new St('나선주', 48, 87, 43, 25));
+    new_students.push(new St('윤아린', 58, 48, 29, 65));
+    new_students.push(new St('윤명월', 39, 28, 49, 72));
+    new_students.push(new St('김미화', 19, 99, 58, 85));
+    new_students.push(new St('김연화', 90, 10, 76, 76));
+    new_students.push(new St('박아현', 47, 48, 52, 95));
+    new_students.push(new St('서준서', 29, 67, 84, 45));
+    console.log(new_students);
+
+    // 예제 2. new_students에 대해 for 루프를 중복 사용하여 결과 1과 동일한 내용을 출력해 보세요.
+
+  </script>
+</html>

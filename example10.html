@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S-Will 자바스크립트 세미나</title>
+  </head>
+  <body>
+    <p id="p1">Hello World</p>
+  </body>
+  <script>
+    function St(name, korean, math, english, science) {
+      this.이름 = name;
+      this.국어 = korean;
+      this.수학 = math;
+      this.영어 = english;
+      this.과학 = science;
+
+      St.prototype.getSum = function() {
+        return this.국어 + this.수학 + this.영어 + this.과학;
+      }
+      St.prototype.getAverage = function() {
+        return this.getSum() / 4;
+      }
+      St.prototype.getResult = function() {
+        return '이름: ' + this.이름 + ', 합계: ' + this.getSum() + ', 평균: ' + this.getAverage();
+      }
+    }
+    var student = new St('윤인성', 87, 98, 38, 85);
+    console.log(student);
+    console.log(student.getSum());
+    console.log(student.getAverage());
+    console.log(student.getResult());
+
+    // 예제 1. new_students에 대해 for 루프를 사용하여 각각의 요소에 대해 getResult() 메서드를 출력해 보세요.
+    var new_students = [];
+    new_students.push(new St('윤인성', 87, 98, 38, 85));
+    new_students.push(new St('연하진', 92, 19, 58, 54));
+    new_students.push(new St('구지연', 76, 99, 64, 29));
+    new_students.push(new St('나선주', 48, 87, 43, 25));
+    new_students.push(new St('윤아린', 58, 48, 29, 65));
+    new_students.push(new St('윤명월', 39, 28, 49, 72));
+    new_students.push(new St('김미화', 19, 99, 58, 85));
+    new_students.push(new St('김연화', 90, 10, 76, 76));
+    new_students.push(new St('박아현', 47, 48, 52, 95));
+    new_students.push(new St('서준서', 29, 67, 84, 45));
+
+  </script>
+</html>

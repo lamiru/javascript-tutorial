@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S-Will 자바스크립트 세미나</title>
+  </head>
+  <body>
+    <p id="p1">Hello World</p>
+  </body>
+  <script>
+    var fruits = [];
+    fruits.push({'품명': '사과', '가격': 3000});
+    fruits.push({'품명': '배', '가격': 5000});
+    fruits.push({'품명': '복숭아', '가격': 3500});
+    console.log(fruits[0]);
+    console.log(fruits[1]);
+    console.log(fruits[2]);
+    console.log(fruits);
+
+    for (i in fruits) {
+      var result = '|';
+      for (key in fruits[i]) {
+        result += key + ': ' + fruits[i][key] + '|';
+      }
+      console.log(result);
+    } // 결과 1
+
+    function Fr(name, price) {
+      this.품명 = name;
+      this.가격 = price;
+    }
+    var apple = new Fr('사과', 3000);
+    var pear = new Fr('배', 5000);
+    var peach = new Fr('복숭아', 3500);
+    console.log(apple);
+    console.log(pear);
+    console.log(peach);
+
+    // 예제 1. push 메서드를 이용하여 apple, pear, peach를 new_fruits의 요소로 넣고 new_fruits를 출력해 보세요.
+    var new_fruits = [];
+    new_fruits.push(apple);
+    new_fruits.push(pear);
+    new_fruits.push(peach);
+    console.log(new_fruits);
+
+    // 예제 2. new_fruits에 대해 for 루프를 중복 사용하여 결과 1과 동일한 내용을 출력해 보세요.
+    for (i in new_fruits) {
+      var result = '|';
+      for (key in new_fruits[i]) {
+        result += key + ': ' + new_fruits[i][key] + '|';
+      }
+      console.log(result);
+    }
+  </script>
+</html>
